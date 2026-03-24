@@ -19,7 +19,10 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Gaaddidduu uumuuf */
     text-align: left;
 }
-
+.container {
+    /* ... koodii kee isa duraa ... */
+    animation: fadeUp 1.2s ease-out; /* Sekondii 1.2 keessatti suuta jedhee dhufa */
+}
 /* Mata-duree gurguddaa (Header) */
 h1 {
     color: #2c3e50;
@@ -157,4 +160,25 @@ nav {
 
 .contact-form input:focus, .contact-form textarea:focus {
     border-color: #3498db; /* Yeroo itti barreessan halluun ni jijjiirama */
+}
+/* Animation 'fadeUp' jedhamu uumuuf */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Gadi irraa 30px fageenya qaba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Bakka isaatti deebi'a */
+    }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+img {
+    /* ... koodii kee isa duraa ... */
+    animation: pulse 3s infinite ease-in-out; /* Addaan hin kutu (infinite) */
 }
