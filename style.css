@@ -116,3 +116,19 @@ nav li a:hover {
     background-color: #3498db; /* Yeroo arrow irra kaayyan halluun ni jijjiirama */
     border-radius: 8px;
 }
+/* Weebsaayitiin bilbila irratti akka of sirreessuuf */
+@media (max-width: 600px) {
+    .container {
+        width: 90%; /* Saanduqichi bilbila irratti akka hin bal'anne */
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Menu'n bilbila irratti wal-jala akka ta'u */
+    }
+
+    nav li a {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+}
