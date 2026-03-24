@@ -1,6 +1,6 @@
-/* Hundee weebsaayitiitiif (Body styling) */
+/* 1. Hundee Weebsaayitiitiif (Body styling) */
 body {
-    background-color: #f0f2f5; /* Halluu duubbee qulqulluu */
+    background-color: #f0f2f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 40px 10px;
@@ -9,21 +9,55 @@ body {
     color: #333;
 }
 
-/* Saanduqa barruun keessa jiru (Box Model) */
+/* 2. Saanduqa Barruun keessa jiru (Container) */
 .container {
     background-color: #ffffff;
     max-width: 650px;
     width: 100%;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Gaaddidduu uumuuf */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: left;
+    animation: fadeUp 1.2s ease-out; /* Animation asitti hidhame */
 }
-.container {
-    /* ... koodii kee isa duraa ... */
-    animation: fadeUp 1.2s ease-out; /* Sekondii 1.2 keessatti suuta jedhee dhufa */
+
+/* 3. Navigation Menu */
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 8px;
 }
-/* Mata-duree gurguddaa (Header) */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav li a:hover {
+    background-color: #3498db;
+    border-radius: 8px;
+}
+
+/* 4. Mata-duree fi Barruu */
 h1 {
     color: #2c3e50;
     text-align: center;
@@ -48,7 +82,7 @@ p {
     line-height: 1.8;
 }
 
-/* Fakkii qindeessuuf */
+/* 5. Fakkii fi Animation isaa */
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -58,17 +92,38 @@ p {
 img {
     width: 180px;
     height: 180px;
-    border-radius: 50%; /* Geengoo gochuuf */
+    border-radius: 50%;
     border: 6px solid #3498db;
     object-fit: cover;
     transition: transform 0.4s ease;
+    animation: pulse 3s infinite ease-in-out; /* Animation asitti hidhame */
 }
 
 img:hover {
-    transform: scale(1.1) rotate(5deg); /* Yeroo arrow irra kaayyan ni socho'a */
+    transform: scale(1.1) rotate(5deg);
 }
 
-/* Linkii (Button) fakkeessuuf */
+/* 6. Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #3498db;
+}
+
+/* 7. Button fi Footer */
 .btn {
     display: block;
     text-align: center;
@@ -87,7 +142,6 @@ img:hover {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
 }
 
-/* Jala weebsaayitiitiif (Footer) */
 footer {
     text-align: center;
     margin-top: 40px;
@@ -96,89 +150,36 @@ footer {
     border-top: 1px solid #eee;
     padding-top: 20px;
 }
-nav ul {
-    list-style-type: none; /* Qabxiiwwan (bullets) balleessuuf */
-    margin: 0;
-    padding: 0;
-    background-color: #2c3e50; /* Halluu duubbee menu */
-    display: flex; /* Sarara tokko irratti fiduuf */
-    justify-content: center; /* Gidduu galchuuf */
-    border-radius: 8px;
-}
 
-nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none; /* Sarara jala jiru balleessuuf */
-    font-weight: bold;
-}
-
-nav li a:hover {
-    background-color: #3498db; /* Yeroo arrow irra kaayyan halluun ni jijjiirama */
-    border-radius: 8px;
-}
-nav {
-    position: -webkit-sticky; /* Braawzariilee tokko tokkoof */
-    position: sticky;        /* Gubbaatti akka hidhamu */
-    top: 0;                  /* Fageenya gubbaa irraa 0 ta'uu qaba */
-    z-index: 1000;           /* Wanta biraa hunda gubbaa akka ta'u */
-    background-color: white; /* Yeroo scroll gootu barruu biraa waliin akka hin makamne */
-    padding: 10px 0;
-/* Weebsaayitiin bilbila irratti akka of sirreessuuf */
+/* 8. Media Queries (Bilbilaaf) */
 @media (max-width: 600px) {
     .container {
-        width: 90%; /* Saanduqichi bilbila irratti akka hin bal'anne */
+        width: 90%;
         padding: 20px;
     }
-
     nav ul {
-        flex-direction: column; /* Menu'n bilbila irratti wal-jala akka ta'u */
+        flex-direction: column;
     }
-
     nav li a {
         padding: 10px;
         border-bottom: 1px solid #444;
     }
 }
-/* Contact Form Bareechisuuf */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px; /* Gidduu isaanii fageenya uumuuf */
-    margin-top: 20px;
-}
 
-.contact-form input, .contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #3498db; /* Yeroo itti barreessan halluun ni jijjiirama */
-}
-/* Animation 'fadeUp' jedhamu uumuuf */
+/* 9. Keyframes (Animation Definitions) */
 @keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(30px); /* Gadi irraa 30px fageenya qaba */
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Bakka isaatti deebi'a */
+        transform: translateY(0);
     }
 }
+
 @keyframes pulse {
     0% { transform: scale(1); }
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
-}
-
-img {
-    /* ... koodii kee isa duraa ... */
-    animation: pulse 3s infinite ease-in-out; /* Addaan hin kutu (infinite) */
 }
