@@ -116,6 +116,13 @@ nav li a:hover {
     background-color: #3498db; /* Yeroo arrow irra kaayyan halluun ni jijjiirama */
     border-radius: 8px;
 }
+nav {
+    position: -webkit-sticky; /* Braawzariilee tokko tokkoof */
+    position: sticky;        /* Gubbaatti akka hidhamu */
+    top: 0;                  /* Fageenya gubbaa irraa 0 ta'uu qaba */
+    z-index: 1000;           /* Wanta biraa hunda gubbaa akka ta'u */
+    background-color: white; /* Yeroo scroll gootu barruu biraa waliin akka hin makamne */
+    padding: 10px 0;
 /* Weebsaayitiin bilbila irratti akka of sirreessuuf */
 @media (max-width: 600px) {
     .container {
