@@ -3,50 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weebsaayitii Lammaa - Jalqaba</title>
+    <title>Lammaa - Professional Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#management">Management</a></li>
+            <li><a href="#midwifery">Midwifery</a></li>
+            <li><a href="#webdev">Web Dev</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <header>
+        
+        <section id="home" class="hero">
+            <div class="image-wrapper">
+                <img src="SIIF8310.JPG" alt="Lammaa Photo">
+            </div>
             <h1>Baga Nagaan Dhufte</h1>
-            <p class="subtitle">Kun Pirojekti koo isa jalqabaati</p>
-        </header>
-
-        <section class="content">
-            <p>Ani maqaan koo <strong>Lammaan</strong> jedhama. Yeroo amma kana weebsaayitii mataa koo kan ta'e isa jalqabaan hojjechaa jira. Teknoolojii fi koodii barachuun galma koo isa guddaadha.</p>
-
-            <h1>Kaayyoon Koo</h1>
-            <p>Kaayyoon koo weebsaayitii kanaan namoota hedduu fayyaduu fi odeeffannoo barbaachisaa kennuu dha.</p>
+            <p class="subtitle">Ogeessa Management, Midwifery fi Web Development</p>
         </section>
 
-        <div class="image-wrapper">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="Web Development Photo">
-        </div>
-        <img src="C:\Users\User\Desktop\SIIF8310.JPG" alt="Local Image">
-        
-        <section id="contact">
-            <h1>Na Quunnamaa</h1>
+        <section id="about" class="content-block">
+            <h2>Waa'ee Koo</h2>
+            <p>Ani Lammaa jedhama. Barataa Yuunivarsiitii dandeettiiwwan adda addaa walitti qabatee dha. Jireenya koo keessatti barumsa adda addaa barachuun nama hawaasa gargaaru ta'uun abjuu kooti. Ogummaan koo Management irraa jalqabee hamma gargaarsa fayyaa (Midwifery) fi teeknoolojiitti (Web Development) bal'ata.</p>
+        </section>
+
+        <section id="management" class="content-block">
+            <h2>Management (Hogganummaa)</h2>
+            <p>Management jechuun qabeenya jiru (nama, maallaqaa fi yeroo) sirriitti fayyadamanii galma barbaadamu bira ga'uudha. Ani dandeettii karoorsuu, qindeessuu fi rakkoo hiikuu irratti xiyyeeffadha. Pirojektiwwan adda addaa qulqullinaan gaggeessuun ogummaa kooti.</p>
+        </section>
+
+        <section id="midwifery" class="content-block">
+            <h2>Midwifery (Deessisummaa)</h2>
+            <p>Ogummaan Midwifery jireenya haaraa addunyaa kanatti fiduu fi fayyaa haadhaas ta'ee daa'imaa eeguu irratti xiyyeeffata. Kun ogummaa obsa, garaa laafummaa fi dandeettii yaalaa olaanaa gaafatu dha. Hawaasa kootiif tajaajila fayyaa qulqulluu kennuun boonummaa kooti.</p>
+        </section>
+
+        <section id="webdev" class="content-block">
+            <h2>Web Development</h2>
+            <p>Addunyaan teeknoolojiin wal-qabattee jirti. HTML, CSS fi JavaScript fayyadamee weebsaayitiilee ijaaruun hojii Management fi Midwifery koo addunyaa hunda biraan ga'uuf na gargaara. Koodii barreessuun kalaqa haaraa uumuudha.</p>
+        </section>
+
+        <section class="content-block">
+            <h2>Mul'ata Koo</h2>
+            <p>Mul'anni koo ogeessa teeknoolojii fayyadamee hojii fayyaa fi hogganummaa ammayyeessu ta'uudha. Fakkeenyaaf, weebsaayitiilee gorsa fayyaa kennan ykn sirna bulchiinsa hospitaalaa (Hospital Management Systems) ijaaruun galma kooti.</p>
+        </section>
+
+        <section class="content-block card-container">
+            <h2>Dandeettiiwwan Koo</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Leadership</div>
+                <div class="skill-item">Clinical Care</div>
+                <div class="skill-item">Frontend Coding</div>
+                <div class="skill-item">Public Health</div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-block">
+            <h2>Pirojektiwwan Koo</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h4>Portfolio Website</h4>
+                    <p>Weebsaayiti dandeettii koo itti agarsiisu.</p>
+                </div>
+                <div class="project-card">
+                    <h4>Health Guide App</h4>
+                    <p>Gorsa fayyaa haadholiif kennu (Soon).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="content-block">
+            <h2>Na Quunnamaa</h2>
             <form class="contact-form">
                 <input type="text" placeholder="Maqaa Keessan" required>
                 <input type="email" placeholder="Email Keessan" required>
-                <textarea placeholder="Ergaa Keessan" rows="5" required></textarea>
+                <textarea placeholder="Ergaa keessan asitti barreessaa..." rows="5" required></textarea>
                 <button type="submit" class="btn">Ergaa Ergi</button>
             </form>
         </section>
 
         <footer>
-            <p>Copyright &copy; 2026 | <strong>LAMMAA</strong></p>
+            <p>Copyright &copy; 2026 | Developed by <strong>LAMMAA</strong></p>
+            <p>Location: Ethiopia | Professional Portfolio</p>
         </footer>
     </div>
 
