@@ -1,5 +1,10 @@
-// Button yeroo tuqamu ergaa kana agarsiisa
-function nagaaHullee() {
-    alert("Ergaa keessan nagaan fudhanneerra! Galatoomaa Lammaa quunnamuu keessaniif.");
+// 1. Ergaa nagaa (Alert) - Namni button yoo tuqu kan ba'u
+function ergaaErgi() {
+    alert("Galatoomaa Lammaa quunnamuu keessaniif! Ergaa keessan nagaan fudhanneerra.");
 }
-<button type="submit" class="btn" onclick="nagaaHullee()">Ergaa Ergi</button>
+
+// 2. Dark Mode (Halkan akka toluuf halluu jijjiiruu)
+// Kun immoo gara fuulduraatti button 'Dark Mode' yoo dabalte si gargaara
+function bifaJijjiiri() {
+    document.body.classList.toggle("dark-theme");
+}
