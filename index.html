@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lammaa - Professional & Inspirational Portfolio</title>
+    <title>Lammaa - Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button type="button" class="mode-btn" onclick="bifaJijjiiri()">🌙 Dark/Light Mode</button>
+
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
@@ -15,7 +16,7 @@
             <li><a href="#management">Management</a></li>
             <li><a href="#midwifery">Midwifery</a></li>
             <li><a href="#webdev">Web Dev</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><button type="button" class="mode-btn" onclick="bifaJijjiiri()">🌙 Mode</button></li>
         </ul>
     </nav>
 
@@ -29,12 +30,10 @@
             <p class="quote">"Inni ka'umsa hundaati; namni of amane hunda danda'a." — <strong>Mahatma Gandhi</strong></p>
             <p>Ani Lammaa, ogeessa dandeettii adda addaa walitti qabatee fi jijjiiramaaf halkan fi guyyaa carraaqu dha.</p>
         </section>
-<div class="theme-switch">
-    <button type="button" class="mode-btn" onclick="bifaJijjiiri()">🌙 Dark/Light Mode</button>
-</div>
+
         <section id="about" class="content-block">
             <h2>Waa'ee Koo & Seenaa Ko</h2>
-            <p>Jireenyi barumsa dha. Abba koo hin baranne garuu baruumsaaf fedha adda qabu biratti guddachuun koo obsa fi jabeenya na barsiiseera. Barataa midwifery ta'ee, gama kanaan Management fi Coding barachuun koo immoo mul'ata koo bal'iseera.</p>
+            <p>Jireenyi barumsa dha. Abbaa koo baruumsaaf fedha adda qabu biratti guddachuun koo obsa fi jabeenya na barsiiseera. Barataa Midwifery ta'ee, gama kanaan Management fi Coding barachuun koo immoo mul'ata koo bal'iseera.</p>
             <blockquote class="motivational-quote">
                 "Barumsi meeshaa humna qabu kan ati addunyaa ittiin jijjiiruuf fayyadamtu dha." — <strong>Nelson Mandela</strong>
             </blockquote>
@@ -89,15 +88,27 @@
         </section>
 
         <section id="contact" class="content-block">
-    <h2>Na Quunnamaa</h2>
-    <p>Gaaffii ykn yaada yoo qabaattan asitti naaf barreessaa. Walgaltee fi tumsaaf yoomuu qophiidha!</p>
-    <button type="button" class="btn" onclick="ergaaErgi()">Ergaa Ergi</button>
-</section>
+            <h2>Na Quunnamaa</h2>
+            <form class="contact-form">
+                <input type="text" id="user-name" placeholder="Maqaa Keessan" required>
+                <input type="email" placeholder="Email Keessan" required>
+                <textarea placeholder="Ergaa keessan asitti barreessaa..." rows="5" required></textarea>
+                <button type="button" class="btn" onclick="ergaaErgi()">Ergaa Ergi</button>
+            </form>
+
+            <div class="social-links">
+                <a href="https://t.me/mylife0950" target="_blank" class="social-icon telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://www.facebook.com/share/1HcEk5sALE/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://github.com/lemma09" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+            </div>
+        </section>
+
         <footer>
             <p>Copyright &copy; 2026 | Developed with ❤️ by <strong>LAMMAA</strong></p>
             <p>"Milkaa'inni dhuma miti, kufaatiinis du'a miti; kan barbaachisu ija jabummaa itti fufuu dha." — <strong>Winston Churchill</strong></p>
         </footer>
     </div>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
