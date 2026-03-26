@@ -162,3 +162,16 @@ footer {
     background-color: #34495e;
     color: white;
 }
+/* Fakkiiwwan pirojekti yeroo irra qabaman akka dhiitan */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+    border-top: 6px solid #e67e22; /* Halluu jijjiira */
+    transition: 0.4s;
+}
+
+/* Fakkii kee isa gubbaa jiruuf */
+.image-wrapper img:hover {
+    filter: grayscale(0%);
+    transform: rotate(5deg);
+}
