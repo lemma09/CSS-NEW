@@ -13,6 +13,7 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#midwifery">Midwifery</a></li>
             <li><a href="#management">Management</a></li>
             <li><a href="#webdev">Web Dev</a></li>
             <li><button type="button" class="mode-btn" onclick="bifaJijjiiri()">🌙 Mode</button></li>
@@ -25,44 +26,49 @@
             <div class="image-wrapper">
                 <img src="SIIF8310.JPG" alt="Lammaa Photo" class="profile-img">
             </div>
-            <h1>Baga Nagaan Dhufte</h1>
-            <p class="quote">"Inni ka'umsa hundaati; namni of amane hunda danda'a." — <strong>Mahatma Gandhi</strong></p>
-            <p>Ani Lammaa, ogeessa dandeettii adda addaa walitti qabatee fi jijjiiramaaf carraaqu dha.</p>
+            <h1 class="gradient-text">Baga Nagaan Dhufte</h1>
+            <p class="main-quote">"Ka'umsa kee hin irraanfatin, hamma galma kee geessutti hin dhaabbatin."</p>
+            <p>Ani Lammaa, ogeessa dandeettii dachaatiin addunyaa kalaqaa keessa jiru dha.</p>
         </section>
 
         <section id="about" class="content-block">
-            <h2 style="color: #2980b9;">Waa'ee Koo & Jireenya Koo</h2>
-            <p>Jireenyi barumsa dha. Barataa <b style="color: #27ae60;">Management fi Pharmacy</b> ta'ee, gama koodiitiinis of ijaaraa jira.</p>
+            <h2 class="section-title" style="color: #2980b9;">Waa'ee Koo & Jireenya Koo</h2>
+            <p>Jireenyi barumsa, qabsoo fi abjuu kumni guutame dha. Amma <span class="highlight-blue">Barataa Management fi Midwifery</span> yoo ta'u, gama koodiitiinis dandeettii koo gabbisaan jira.</p>
             
             <div class="personal-card">
                 <p><i class="fas fa-heart" style="color: #e74c3c;"></i> <strong>Status:</strong> Amma <span class="status-single">Single</span> dha. Qabeenyi koo inni guddaan mul'ata kooti.</p>
-                <p><i class="fas fa-ring" style="color: #f1c40f;"></i> <strong>Mul'ata Boruu:</strong> Amma hojii haaraa uumuu irratti xiyyeeffadhus, boru hiriyaa jaalalaa tan har'a hiriyaa, boru immoo <span class="future-wife">Haadha Manaa</span> koo taatee jireenya koo waliin miidhagsitu argachuun abjuu kooti.</p>
+                <p><i class="fas fa-ring" style="color: #f1c40f;"></i> <strong>Mul'ata Boruu:</strong> Amma hojii haaraa uumuu fi of ijaaruu irratti xiyyeeffadhus, boru hiriyaa jaalalaa tan amala koof taatu, tan har'a hiriyaa, boru immoo <span class="future-wife">Haadha Manaa</span> koo taatee jireenya koo waliin miidhagsitu argachuun abjuu kooti.</p>
             </div>
         </section>
 
         <section class="content-block">
-            <h2 style="color: #8e44ad;">Jechoota Hayyootaa</h2>
+            <h2 class="section-title" style="color: #8e44ad;">Jechoota Hayyootaa</h2>
             <div class="quotes-grid">
                 <div class="quote-card">
-                    <img src="https://www.biography.com/.image/t_share/MTY2MzU2OTcxNjU2OTQyNjIz/albert_einstein_by_albin_kaas_1921.jpg" alt="Einstein">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Einstein">
                     <p>"Namni dogoggora hin hojjenne, waan haaraa yaalee hin beeku."</p>
                     <small>— Albert Einstein</small>
                 </div>
                 <div class="quote-card">
-                    <img src="https://www.biography.com/.image/t_share/MTY2MzU2NzkzOTMwMzM1OTEx/nelson-mandela_gettyimages-112702522.jpg" alt="Mandela">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Nelson_Mandela_1994.jpg" alt="Mandela">
                     <p>"Wanti hundi hamma hojjetamuutti kan hin danda'amne fakkaata."</p>
                     <small>— Nelson Mandela</small>
+                </div>
+                <div class="quote-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Steve_Jobs_Headshot_2010-edit.jpg" alt="Steve Jobs">
+                    <p>"Hojii guddaa hojjechuuf, waan hojjettu jaallachuu qabda."</p>
+                    <small>— Steve Jobs</small>
                 </div>
             </div>
         </section>
 
-        <section id="management" class="content-block">
-            <h2>Management & Web Dev</h2>
-            <p>Bulchiinsi gaariin utubaa milkaa'inaati. Koodiin immoo afaan addunyaa isa haaraati.</p>
+        <section id="midwifery" class="content-block">
+            <h2 class="section-title" style="color: #27ae60;">Midwifery: Ogummaa Yaalaa</h2>
+            <p>Jireenya haaraa addunyaatti fiduun eebba dha. Fayyaa haadhaa fi daa'imaa eeguun ogummaa qulqulluu dha. Hawaasa kootiif tajaajila jaalalaan guutame kennuun boonummaa kooti.</p>
         </section>
 
         <section id="contact" class="content-block">
-            <h2 style="color: #e67e22;">Na Quunnamaa</h2>
+            <h2 class="section-title" style="color: #e67e22;">Na Quunnamaa</h2>
             <form action="https://formspree.io/f/mvzvojvo" method="POST" class="contact-form">
                 <input type="text" name="name" id="user-name" placeholder="Maqaa Keessan" required>
                 <input type="email" name="email" placeholder="Email Keessan" required>
@@ -77,7 +83,7 @@
         </section>
 
         <footer>
-            <p>Copyright &copy; 2026 | Developed by <strong>LAMMAA</strong></p>
+            <p>Copyright &copy; 2026 | Developed with ❤️ by <strong>LAMMAA</strong></p>
         </footer>
     </div>
 
