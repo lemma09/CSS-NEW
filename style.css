@@ -175,3 +175,37 @@ footer {
     filter: grayscale(0%);
     transform: rotate(5deg);
 }
+/* Dark Mode Colors */
+.dark-theme {
+    background-color: #121212 !important; /* Gurraacha halkan */
+    color: #ffffff !important;
+}
+
+.dark-theme .container {
+    background-color: #1e1e1e !important;
+    color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.dark-theme h1, .dark-theme h2 {
+    color: #3498db;
+}
+
+.dark-theme .project-card {
+    background: #2d2d2d;
+    color: white;
+}
+
+/* Button miidhagsuuf */
+.mode-btn {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.mode-btn:hover { background: #34495e; }

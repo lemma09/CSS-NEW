@@ -25,3 +25,10 @@ function ergaaErgi() {
         alert("Galatoomaa " + maqaa + "! Ergaa keessan nagaan fudhanneerra. Gara email keessan: " + email + " irratti deebii isiniif ergina.");
     }
 }
+function bifaJijjiiri() {
+    // Mallattoo 'dark-theme' jedhu body irratti ni dabala ykn ni hir'isa
+    document.body.classList.toggle("dark-theme");
+    
+    // Ergaa xiqqoo akka namni hubatuuf
+    console.log("Bifti weebsaayitii jijjiirameera!");
+}
