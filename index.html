@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lammaa - Visionary Portfolio</title>
+    <title>Lammaa - Professional Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,53 +23,51 @@
         
         <section id="home" class="hero">
             <div class="image-wrapper">
-                <img src="SIIF8310.JPG" alt="Lammaa Photo">
+                <img src="SIIF8310.JPG" alt="Lammaa Photo" class="profile-img">
             </div>
-            <h1 class="gradient-text">Baga Nagaan Dhufte</h1>
-            <p class="main-quote">"Ka'umsa kee hin irraanfatin, hamma galma kee geessutti hin dhaabbatin."</p>
-            <p>Ani Lammaa, ogeessa dandeettii dachaatiin addunyaa kalaqaa keessa jiru dha.</p>
+            <h1>Baga Nagaan Dhufte</h1>
+            <p class="quote">"Inni ka'umsa hundaati; namni of amane hunda danda'a." — <strong>Mahatma Gandhi</strong></p>
+            <p>Ani Lammaa, ogeessa dandeettii adda addaa walitti qabatee fi jijjiiramaaf carraaqu dha.</p>
         </section>
 
         <section id="about" class="content-block">
-            <h2 class="section-title">Waa'ee Koo & Jireenya Koo</h2>
-            <div class="status-box">
-                <p>Jireenyi koo barumsa, qabsoo fi abjuu kumni guutame dha. Amma <span class="highlight-blue">Barataa Management fi Pharmacy</span> yoo ta'u, gama koodiitiinis dandeettii koo gabbisaan jira.</p>
-                <p class="personal-status">
-                    <i class="fas fa-heart-broken"></i> <strong>Status:</strong> Amma <span class="highlight-red">Single</span> dha. Garuu kolfi koo fi kaayyoon koo dhuunfaatti na gaha. 
-                    <br><br>
-                    <i class="fas fa-ring"></i> <strong>Mul'ata Boruu:</strong> Amma hojii haaraa uumuu fi of ijaaruu irratti xiyyeeffadhee jira. Boru garuu, hiriyaa jaalalaa tan amala koof taatu, tan har'a hiriyaa, boru immoo <span class="highlight-green">Haadha Manaa</span> koo taatee jireenya koo waliin miidhagsitu argachuun abjuu kooti.
-                </p>
+            <h2 style="color: #2980b9;">Waa'ee Koo & Jireenya Koo</h2>
+            <p>Jireenyi barumsa dha. Barataa <b style="color: #27ae60;">Management fi Pharmacy</b> ta'ee, gama koodiitiinis of ijaaraa jira.</p>
+            
+            <div class="personal-card">
+                <p><i class="fas fa-heart" style="color: #e74c3c;"></i> <strong>Status:</strong> Amma <span class="status-single">Single</span> dha. Qabeenyi koo inni guddaan mul'ata kooti.</p>
+                <p><i class="fas fa-ring" style="color: #f1c40f;"></i> <strong>Mul'ata Boruu:</strong> Amma hojii haaraa uumuu irratti xiyyeeffadhus, boru hiriyaa jaalalaa tan har'a hiriyaa, boru immoo <span class="future-wife">Haadha Manaa</span> koo taatee jireenya koo waliin miidhagsitu argachuun abjuu kooti.</p>
             </div>
         </section>
 
         <section class="content-block">
-            <h2 class="section-title">Jechoota Hayyoota Naf Kakaasan</h2>
+            <h2 style="color: #8e44ad;">Jechoota Hayyootaa</h2>
             <div class="quotes-grid">
                 <div class="quote-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg" alt="Einstein">
+                    <img src="https://www.biography.com/.image/t_share/MTY2MzU2OTcxNjU2OTQyNjIz/albert_einstein_by_albin_kaas_1921.jpg" alt="Einstein">
                     <p>"Namni dogoggora hin hojjenne, waan haaraa yaalee hin beeku."</p>
-                    <span>— Albert Einstein</span>
+                    <small>— Albert Einstein</small>
                 </div>
                 <div class="quote-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Nelson_Mandela_1994.jpg" alt="Mandela">
+                    <img src="https://www.biography.com/.image/t_share/MTY2MzU2NzkzOTMwMzM1OTEx/nelson-mandela_gettyimages-112702522.jpg" alt="Mandela">
                     <p>"Wanti hundi hamma hojjetamuutti kan hin danda'amne fakkaata."</p>
-                    <span>— Nelson Mandela</span>
-                </div>
-                <div class="quote-card">
-                    <img src="https://i.guim.co.uk/img/media/06775f0a058476f4e13dae723cc0f4a8618ebbc4/0_231_3000_1800/master/3000.jpg?width=1200&quality=85&auto=format&fit=max&s=d2782e46045507cc23999905c6d37107" alt="Steve Jobs">
-                    <p>"Hojii guddaa hojjechuuf, waan hojjettu jaallachuu qabda."</p>
-                    <span>— Steve Jobs</span>
+                    <small>— Nelson Mandela</small>
                 </div>
             </div>
         </section>
 
+        <section id="management" class="content-block">
+            <h2>Management & Web Dev</h2>
+            <p>Bulchiinsi gaariin utubaa milkaa'inaati. Koodiin immoo afaan addunyaa isa haaraati.</p>
+        </section>
+
         <section id="contact" class="content-block">
-            <h2 class="section-title">Na Quunnamaa</h2>
+            <h2 style="color: #e67e22;">Na Quunnamaa</h2>
             <form action="https://formspree.io/f/mvzvojvo" method="POST" class="contact-form">
-                <input type="text" name="name" placeholder="Maqaa Keessan" required>
+                <input type="text" name="name" id="user-name" placeholder="Maqaa Keessan" required>
                 <input type="email" name="email" placeholder="Email Keessan" required>
                 <textarea name="message" placeholder="Ergaa keessan asitti barreessaa..." rows="5" required></textarea>
-                <button type="submit" class="btn-glow">Ergaa Ergi</button>
+                <button type="submit" class="btn">Ergaa Ergi</button>
             </form>
 
             <div class="social-links">
@@ -79,7 +77,7 @@
         </section>
 
         <footer>
-            <p>Made with ❤️ by <strong>LAMMAA</strong> | 2026</p>
+            <p>Copyright &copy; 2026 | Developed by <strong>LAMMAA</strong></p>
         </footer>
     </div>
 
