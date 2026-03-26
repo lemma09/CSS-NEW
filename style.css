@@ -209,3 +209,24 @@ footer {
 }
 
 .mode-btn:hover { background: #34495e; }
+/* Dark Mode Colors */
+.dark-theme { background-color: #1a1a1a !important; color: #ffffff !important; }
+.dark-theme .container { background-color: #262626 !important; color: #ffffff !important; }
+
+/* Visual Hover Effects */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(52, 152, 219, 0.4);
+    transition: 0.4s;
+}
+
+.mode-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
