@@ -70,7 +70,7 @@
 
         /* HOME SECTION */
         #home {
-            min-height: 65vh;
+            min-height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -86,41 +86,28 @@
         }
 
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #38bdf8;
             box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
-            margin-bottom: 15px;
-        }
-
-        /* Subtitle sarara tokko qofa irratti fit akka ta'uuf */
-        .hero-subtitle {
-            font-size: 0.95rem;
-            color: #38bdf8;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
             margin-bottom: 30px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
         }
 
         /* 2 Big Clickable Cards */
         .home-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 25px;
             width: 100%;
-            max-width: 700px;
+            max-width: 600px;
         }
 
         .click-card {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 25px 20px;
+            padding: 30px 20px;
             border-radius: 20px;
             color: var(--text-light);
             text-decoration: none;
@@ -131,8 +118,8 @@
         }
 
         .click-card i {
-            font-size: 2.5rem;
-            margin-bottom: 12px;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
             color: #38bdf8;
         }
 
@@ -144,13 +131,7 @@
         }
 
         .click-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 6px;
-        }
-
-        .click-card p {
-            font-size: 0.85rem;
-            color: #cbd5e1;
+            font-size: 1.4rem;
         }
 
         /* SECTION STYLING */
@@ -307,7 +288,6 @@
         }
 
         @media (max-width: 600px) {
-            .hero-subtitle { font-size: 0.8rem; }
             .contact-card-inline { gap: 15px; padding: 15px 20px; }
             .icon-btn { font-size: 1.3rem; width: 40px; height: 40px; }
         }
@@ -329,21 +309,16 @@
         <!-- 1. HOME SECTION -->
         <section id="home">
             <img src="SIIF8310.JPG" alt="Profile" class="profile-img">
-            
-            <!-- Mata Duree Sarara Tokko Qofa Irratti (No Wrap / Truncated) -->
-            <p class="hero-subtitle">BA in Management | BSc in Midwifery | Creative Media Specialist & Digital Strategist</p>
 
-            <!-- 2 CLICKABLE CARDS -->
+            <!-- 2 CLICKABLE CARDS (NO SUBTITLE / NO TEXT DESCRIPTIONS) -->
             <div class="home-cards">
                 <a href="#cv-details" class="click-card">
                     <i class="fas fa-id-card"></i>
                     <h3>Curriculum Vitae</h3>
-                    <p>Education, GPA, Skills, Strengths, Certificates & Hobbies</p>
                 </a>
                 <a href="#applications" class="click-card">
                     <i class="fas fa-envelope-open-text"></i>
                     <h3>Application Letters</h3>
-                    <p>Professional Cover Letters for Management & Healthcare</p>
                 </a>
             </div>
         </section>
@@ -351,7 +326,7 @@
         <!-- 2. ABOUT ME & PORTFOLIO SECTION -->
         <section id="about" class="main-section">
             
-            <!-- MAQAA KEE IDDOO TOKKO QOFA (DEFINITION ABOUT ME KEESSATTI) -->
+            <!-- DEFINITION ABOUT ME KEESSATTI -->
             <div class="section-header">
                 <h2>Lemma Asefa Kebede</h2>
                 <p style="color: #64748b; font-size: 0.95rem; margin-top: 5px;">Jemo, Addis Ababa, Ethiopia</p>
@@ -510,7 +485,7 @@ Applicant
             </div>
         </section>
 
-        <!-- 3. CONTACT SECTION - SARARA TOKKO QOFA (ICONS ONLY) -->
+        <!-- 3. CONTACT SECTION -->
         <section id="contact">
             <div class="contact-card-inline">
                 <a href="tel:0909506573" class="icon-btn" title="Call Me">
