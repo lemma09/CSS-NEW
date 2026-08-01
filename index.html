@@ -109,7 +109,7 @@
             width: 100%;
         }
 
-        /* PAGE TAB SECTIONS (Single view setup) */
+        /* INDEPENDENT TAB SYSTEM */
         .tab-content {
             display: none;
             animation: fadeIn 0.4s ease-in-out forwards;
@@ -156,7 +156,7 @@
         }
 
         .welcome-msg {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 30px;
             color: #38bdf8;
@@ -357,12 +357,11 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
+    <!-- TOP NAVIGATION (Only Home, About Me, Contact) -->
     <nav>
         <ul>
             <li><a onclick="switchTab('home')" id="nav-home" class="active"><i class="fas fa-home"></i> Home</a></li>
             <li><a onclick="switchTab('about')" id="nav-about"><i class="fas fa-user-circle"></i> About Me</a></li>
-            <li><a onclick="switchTab('cv')" id="nav-cv"><i class="fas fa-id-card"></i> CV & Applications</a></li>
             <li><a onclick="switchTab('contact')" id="nav-contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
         </ul>
         <button class="theme-toggle" id="themeBtn">
@@ -372,13 +371,13 @@
 
     <div class="container">
 
-        <!-- 1. HOME TAB -->
+        <!-- 1. HOME TAB (Completely Standalone) -->
         <section id="home" class="tab-content active">
             <img src="SIIF8310.JPG" alt="Lemma Asefa Kebede" class="user-avatar">
 
             <!-- Welcome Message -->
             <div class="welcome-msg">
-                ✨ Baga nagaan gara CV fi Application Letter koo ilaaluu dhuftan! 🙏
+                ✨ Welcome! Feel free to review my CV & Application Letters 🙏
             </div>
 
             <div class="home-cards">
@@ -386,14 +385,14 @@
                     <i class="fas fa-id-card"></i>
                     <h3>Curriculum Vitae 📄</h3>
                 </div>
-                <div onclick="switchTab('cv')" class="click-card">
+                <div onclick="switchTab('applications')" class="click-card">
                     <i class="fas fa-envelope-open-text"></i>
                     <h3>Application Letters ✉️</h3>
                 </div>
             </div>
         </section>
 
-        <!-- 2. ABOUT ME TAB -->
+        <!-- 2. ABOUT ME TAB (Completely Standalone) -->
         <section id="about" class="tab-content main-section">
             <div class="section-header">
                 <h2>Lemma Asefa Kebede 👤</h2>
@@ -409,7 +408,7 @@
                         <ul class="skills-list">
                             <li>⚡ Fast Learner & Adaptable</li>
                             <li>⚡ Strong Leadership Skills</li>
-                            <li>⚡ Problem Solving Ability</li>
+                            <li>⚡ Problem-Solving Ability</li>
                             <li>⚡ Result-Oriented & Dedicated</li>
                             <li>⚡ Multi-disciplinary Expertise</li>
                         </ul>
@@ -431,8 +430,8 @@
                         <h3 class="detail-title"><i class="fas fa-language"></i> Languages 🗣️</h3>
                         <ul class="skills-list">
                             <li>🌐 <strong>Afaan Oromoo:</strong> Native 📌</li>
-                            <li>🌐 <strong>Amharic:</strong> Intermediary 🟡</li>
-                            <li>🌐 <strong>English:</strong> Intermediary 🟡</li>
+                            <li>🌐 <strong>Amharic:</strong> Intermediate 🟡</li>
+                            <li>🌐 <strong>English:</strong> Intermediate 🟡</li>
                         </ul>
                     </div>
                     <div class="feature-card">
@@ -451,10 +450,10 @@
             </div>
         </section>
 
-        <!-- 3. CV & APPLICATION LETTERS TAB -->
+        <!-- 3. CV TAB (Standalone View triggered from Home Card) -->
         <section id="cv" class="tab-content main-section">
             <div class="section-header">
-                <h2>Curriculum Vitae & Letters 📜</h2>
+                <h2>Curriculum Vitae 📜</h2>
             </div>
 
             <!-- ACADEMIC BACKGROUND -->
@@ -503,11 +502,15 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- APPLICATION LETTERS -->
-            <div class="detail-block" style="margin-top: 30px;">
-                <h3 class="detail-title"><i class="fas fa-file-alt"></i> Application Letters ✉️</h3>
-                
+        <!-- 4. APPLICATION LETTERS TAB (Standalone View triggered from Home Card) -->
+        <section id="applications" class="tab-content main-section">
+            <div class="section-header">
+                <h2>Application Letters ✉️</h2>
+            </div>
+
+            <div class="detail-block">
                 <h4 style="margin-bottom: 8px; color: var(--text-dark);">1. Management & Operations Role</h4>
                 <div class="letter-box">
 Addis Ababa, Ethiopia
@@ -546,11 +549,11 @@ Lemma Asefa Kebede
             </div>
         </section>
 
-        <!-- 4. CONTACT TAB -->
+        <!-- 5. CONTACT TAB (Completely Standalone) -->
         <section id="contact" class="tab-content">
             <div style="text-align: center; margin-top: 30px;" class="main-section">
                 <h2 style="margin-bottom: 10px;">Get in Touch 📩</h2>
-                <p style="color: #64748b;">Na qunnamsiisuuf icon-oota armaan gadii fayyadamaa:</p>
+                <p style="color: #64748b;">You can reach me directly via the following channels:</p>
                 <div class="contact-card-inline">
                     <a href="tel:0909506573" class="icon-btn" title="Call Me">
                         <i class="fas fa-phone-alt"></i>
@@ -574,22 +577,30 @@ Lemma Asefa Kebede
 
     </div>
 
-    <!-- JAVASCRIPT FOR SINGLE-VIEW TAB SWITCHING -->
+    <!-- JAVASCRIPT FOR INDEPENDENT TAB SWITCHING -->
     <script>
         function switchTab(tabId) {
-            // Hide all tabs
+            // Hide all tab sections
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
 
-            // Remove active class from nav links
+            // Remove active status from navbar links
             const navLinks = document.querySelectorAll('nav ul li a');
             navLinks.forEach(link => link.classList.remove('active'));
 
-            // Show selected tab & set nav active
-            document.getElementById(tabId).classList.add('active');
-            document.getElementById('nav-' + tabId).classList.add('active');
+            // Show target section
+            const targetTab = document.getElementById(tabId);
+            if (targetTab) {
+                targetTab.classList.add('active');
+            }
 
-            // Scroll smoothly to top of content
+            // Set active navigation button if matching top nav
+            const activeNav = document.getElementById('nav-' + tabId);
+            if (activeNav) {
+                activeNav.classList.add('active');
+            }
+
+            // Scroll cleanly to the top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
