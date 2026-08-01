@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content; upgrade-insecure-requests">
     
-    <title>Lemma Asefa Kebede</title>
+    <title>Lemma Asefa Kebede | Professional Portfolio</title>
     
     <!-- Secure CDN Imports via HTTPS -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -20,12 +20,14 @@
             --card-bg: #f8fafc;
             --text-dark: #1e293b;
             --text-light: #f8fafc;
+            --border-color: rgba(255, 255, 255, 0.1);
         }
 
         body.dark-theme {
             --bg-color: #020617;
             --card-bg: #0f172a;
             --text-dark: #f8fafc;
+            --border-color: rgba(255, 255, 255, 0.05);
         }
 
         * {
@@ -45,18 +47,18 @@
             transition: background-color 0.4s ease, color 0.4s ease;
         }
 
-        /* Navigation Bar */
+        /* Navigation Header */
         nav {
             background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             position: sticky;
             top: 0;
             z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 40px;
+            padding: 14px 40px;
         }
 
         nav ul {
@@ -69,10 +71,10 @@
         nav ul li a {
             color: var(--text-light);
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 0.95rem;
-            transition: all 0.3s;
-            padding: 8px 16px;
+            transition: all 0.3s ease;
+            padding: 8px 20px;
             border-radius: 20px;
             cursor: pointer;
         }
@@ -82,12 +84,11 @@
             box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
         }
 
-        /* Dark Mode Toggle */
         .theme-toggle {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: var(--text-light);
-            padding: 8px 15px;
+            padding: 8px 16px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: 600;
@@ -102,21 +103,21 @@
         }
 
         .container {
-            max-width: 1000px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 30px auto;
             padding: 0 20px;
             flex: 1;
             width: 100%;
         }
 
-        /* INDEPENDENT TAB SYSTEM */
+        /* STRICT INDEPENDENT TAB SYSTEM */
         .tab-content {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out forwards;
+            display: none !important;
         }
 
         .tab-content.active {
-            display: block;
+            display: block !important;
+            animation: fadeIn 0.4s ease-in-out forwards;
         }
 
         @keyframes fadeIn {
@@ -124,61 +125,71 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* HOME SECTION */
-        #home {
-            min-height: 60vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        /* 1. OVERVIEW SECTION */
+        #overview {
             text-align: center;
             background: var(--primary-grad);
             border-radius: 24px;
-            padding: 40px 20px;
+            padding: 50px 30px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.3);
             color: var(--text-light);
             border: 1px solid rgba(255,255,255,0.1);
         }
 
         .user-avatar {
-            width: 160px;
-            height: 160px;
+            width: 170px;
+            height: 170px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #38bdf8;
             box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             transition: transform 0.3s ease;
         }
 
         .user-avatar:hover {
-            transform: scale(1.05);
+            transform: scale(1.04);
+        }
+
+        .user-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .user-title {
+            color: #38bdf8;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-weight: 500;
         }
 
         .welcome-msg {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            color: #38bdf8;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 10px 20px;
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* CLICKABLE CARDS */
+        /* PORTAL CARDS TO DETAILS SECTION */
         .home-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
-            width: 100%;
-            max-width: 550px;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .click-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.07);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            padding: 25px 15px;
+            padding: 25px 20px;
             border-radius: 20px;
             color: var(--text-light);
             text-decoration: none;
@@ -190,30 +201,41 @@
         }
 
         .click-card i {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             margin-bottom: 12px;
             color: #38bdf8;
+        }
+
+        .click-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .click-card p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-top: 5px;
         }
 
         .click-card:hover {
             transform: translateY(-5px);
             background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
             border-color: #38bdf8;
         }
 
-        /* MAIN SECTION STYLING */
+        /* 2. DETAILS SECTION */
         .main-section {
             background: var(--card-bg);
             border-radius: 24px;
-            padding: 35px 30px;
+            padding: 40px 35px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
             transition: background-color 0.4s ease;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .section-header h2 {
@@ -225,28 +247,28 @@
 
         .section-header h2::after {
             content: '';
-            width: 60%;
+            width: 50%;
             height: 4px;
             background: var(--accent-grad);
             position: absolute;
             bottom: -8px;
-            left: 20%;
+            left: 25%;
             border-radius: 2px;
         }
 
         .detail-block {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .detail-title {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: #3b82f6;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             display: flex;
             align-items: center;
             gap: 10px;
-            border-bottom: 2px solid rgba(226, 232, 240, 0.2);
-            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(226, 232, 240, 0.3);
+            padding-bottom: 8px;
         }
 
         .grid-2 {
@@ -261,6 +283,9 @@
             border-radius: 16px;
             border-left: 5px solid #3b82f6;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-right: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
         .feature-card.gold { border-left-color: #f59e0b; }
@@ -271,23 +296,12 @@
             display: inline-block;
             background: #e0f2fe;
             color: #0369a1;
-            padding: 3px 10px;
+            padding: 4px 10px;
             border-radius: 10px;
             font-size: 0.8rem;
             font-weight: 700;
             margin-right: 5px;
-            margin-top: 6px;
-        }
-
-        .letter-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(203, 213, 225, 0.3);
-            padding: 20px;
-            border-radius: 16px;
-            white-space: pre-line;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin-top: 8px;
         }
 
         .skills-list {
@@ -295,18 +309,30 @@
         }
 
         .skills-list li {
-            padding: 5px 0;
+            padding: 6px 0;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             color: var(--text-dark);
-            font-size: 0.92rem;
+            font-size: 0.93rem;
         }
 
-        /* CONTACT SECTION - ICONS ONLY */
+        .letter-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(203, 213, 225, 0.4);
+            padding: 22px;
+            border-radius: 16px;
+            white-space: pre-line;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            line-height: 1.6;
+        }
+
+        /* 3. CONTACTS SECTION */
         .contact-card-inline {
             background: var(--primary-grad);
-            padding: 20px 30px;
+            padding: 25px 35px;
             border-radius: 50px;
             display: flex;
             justify-content: center;
@@ -321,8 +347,8 @@
         .icon-btn {
             color: #f8fafc;
             font-size: 1.6rem;
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid rgba(255,255,255,0.15);
@@ -343,26 +369,27 @@
         footer {
             text-align: center;
             color: #64748b;
-            padding: 15px 0;
+            padding: 20px 0;
             font-size: 0.85rem;
             margin-top: auto;
         }
 
         @media (max-width: 600px) {
-            nav { padding: 10px 15px; }
+            nav { padding: 12px 15px; }
             .contact-card-inline { gap: 15px; padding: 15px 20px; }
-            .icon-btn { font-size: 1.3rem; width: 40px; height: 40px; }
+            .icon-btn { font-size: 1.3rem; width: 42px; height: 42px; }
+            .main-section { padding: 25px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP NAVIGATION (Only Home, About Me, Contact) -->
+    <!-- TOP NAVIGATION (Overview, Details, Contacts) -->
     <nav>
         <ul>
-            <li><a onclick="switchTab('home')" id="nav-home" class="active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a onclick="switchTab('about')" id="nav-about"><i class="fas fa-user-circle"></i> About Me</a></li>
-            <li><a onclick="switchTab('contact')" id="nav-contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
+            <li><a onclick="switchTab('overview')" id="nav-overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a onclick="switchTab('details')" id="nav-details"><i class="fas fa-user-circle"></i> Details</a></li>
+            <li><a onclick="switchTab('contacts')" id="nav-contacts"><i class="fas fa-paper-plane"></i> Contacts</a></li>
         </ul>
         <button class="theme-toggle" id="themeBtn">
             <i class="fas fa-moon"></i> <span>Dark</span>
@@ -371,148 +398,148 @@
 
     <div class="container">
 
-        <!-- 1. HOME TAB (Completely Standalone) -->
-        <section id="home" class="tab-content active">
+        <!-- ================= 1. OVERVIEW SECTION ================= -->
+        <section id="overview" class="tab-content active">
             <img src="SIIF8310.JPG" alt="Lemma Asefa Kebede" class="user-avatar">
+            
+            <h1 class="user-name">Lemma Asefa Kebede</h1>
+            <p class="user-title">Management Specialist & Healthcare Professional</p>
 
-            <!-- Welcome Message -->
+            <!-- Modern Global Standard Welcome Message -->
             <div class="welcome-msg">
-                ✨ Welcome! Feel free to review my CV & Application Letters 🙏
+                Welcome to my professional portfolio. Here you will find an overview of my qualifications, formal applications, and contact details.
             </div>
 
+            <!-- Direct Portals to CV & Applications inside Details -->
             <div class="home-cards">
-                <div onclick="switchTab('cv')" class="click-card">
-                    <i class="fas fa-id-card"></i>
-                    <h3>Curriculum Vitae 📄</h3>
+                <div onclick="navigateToSection('cv-section')" class="click-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Curriculum Vitae</h3>
+                    <p>Qualifications, Education & Skills</p>
                 </div>
-                <div onclick="switchTab('applications')" class="click-card">
+                <div onclick="navigateToSection('applications-section')" class="click-card">
                     <i class="fas fa-envelope-open-text"></i>
-                    <h3>Application Letters ✉️</h3>
+                    <h3>Application Letters</h3>
+                    <p>Management & Healthcare Roles</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. ABOUT ME TAB (Completely Standalone) -->
-        <section id="about" class="tab-content main-section">
+
+        <!-- ================= 2. DETAILS SECTION ================= -->
+        <section id="details" class="tab-content main-section">
+            
             <div class="section-header">
-                <h2>Lemma Asefa Kebede 👤</h2>
-                <p style="color: #64748b; font-size: 0.95rem; margin-top: 5px;">📍 Jemo, Addis Ababa, Ethiopia</p>
+                <h2>Professional Details</h2>
+                <p style="color: #64748b; font-size: 0.95rem; margin-top: 6px;">📍 Jemo, Addis Ababa, Ethiopia</p>
             </div>
 
-            <!-- STRENGTHS & WEAKNESSES (LIST ONLY) -->
-            <div class="detail-block">
-                <h3 class="detail-title"><i class="fas fa-balance-scale"></i> Strengths & Weaknesses ⚡</h3>
-                <div class="grid-2">
-                    <div class="feature-card gold">
-                        <h4 style="margin-bottom: 10px;">💪 Strengths</h4>
-                        <ul class="skills-list">
-                            <li>⚡ Fast Learner & Adaptable</li>
-                            <li>⚡ Strong Leadership Skills</li>
-                            <li>⚡ Problem-Solving Ability</li>
-                            <li>⚡ Result-Oriented & Dedicated</li>
-                            <li>⚡ Multi-disciplinary Expertise</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card red">
-                        <h4 style="margin-bottom: 10px;">⚠️ Weaknesses</h4>
-                        <ul class="skills-list">
-                            <li>⚡ Perfectionism in Media Projects</li>
-                            <li>⚡ Over-commitment to Tasks</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- LANGUAGES & HOBBIES -->
-            <div class="detail-block">
-                <div class="grid-2">
-                    <div class="feature-card teal">
-                        <h3 class="detail-title"><i class="fas fa-language"></i> Languages 🗣️</h3>
-                        <ul class="skills-list">
-                            <li>🌐 <strong>Afaan Oromoo:</strong> Native 📌</li>
-                            <li>🌐 <strong>Amharic:</strong> Intermediate 🟡</li>
-                            <li>🌐 <strong>English:</strong> Intermediate 🟡</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <h3 class="detail-title"><i class="fas fa-heart"></i> Hobbies & Interests 🎯</h3>
-                        <ul class="skills-list">
-                            <li>📚 Reading</li>
-                            <li>🤝 Relationship & Socializing</li>
-                            <li>🚶‍♂️ Walking</li>
-                            <li>💡 Practicing New Things</li>
-                            <li>🙋‍♂️ Voluntary Work</li>
-                            <li>📸 Photography & Videography</li>
-                            <li>🌾 Livestock Care & Agriculture</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. CV TAB (Standalone View triggered from Home Card) -->
-        <section id="cv" class="tab-content main-section">
-            <div class="section-header">
-                <h2>Curriculum Vitae 📜</h2>
-            </div>
-
-            <!-- ACADEMIC BACKGROUND -->
-            <div class="detail-block">
-                <h3 class="detail-title"><i class="fas fa-graduation-cap"></i> Education 🎓</h3>
-                <div class="grid-2">
-                    <div class="feature-card gold">
-                        <h4>BA in Management</h4>
-                        <p><strong>Africa Beza University</strong></p>
-                        <div>
-                            <span class="stat-badge">Cumulative GPA: 3.84</span>
-                            <span class="stat-badge">Exit Exam: 71%</span>
+            <!-- PART A: CURRICULUM VITAE (CV) -->
+            <div id="cv-section">
+                
+                <!-- ACADEMIC BACKGROUND -->
+                <div class="detail-block">
+                    <h3 class="detail-title"><i class="fas fa-graduation-cap"></i> Educational Background</h3>
+                    <div class="grid-2">
+                        <div class="feature-card gold">
+                            <h4>BA in Management</h4>
+                            <p><strong>Africa Beza University</strong></p>
+                            <div>
+                                <span class="stat-badge">Cumulative GPA: 3.84</span>
+                                <span class="stat-badge">Exit Exam: 71%</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <h4>BSc in Midwifery</h4>
-                        <p><strong>Wollega University</strong></p>
-                        <div>
-                            <span class="stat-badge">Cumulative GPA: 3.65</span>
-                            <span class="stat-badge">Exit Exam: 67%</span>
+                        <div class="feature-card">
+                            <h4>BSc in Midwifery</h4>
+                            <p><strong>Wollega University</strong></p>
+                            <div>
+                                <span class="stat-badge">Cumulative GPA: 3.65</span>
+                                <span class="stat-badge">Exit Exam: 67%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- SKILLS -->
-            <div class="detail-block">
-                <h3 class="detail-title"><i class="fas fa-tools"></i> Skills & Competencies 🛠️</h3>
-                <div class="grid-2">
-                    <div class="feature-card teal">
-                        <h4>Digital & Creative Skills</h4>
-                        <ul class="skills-list">
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Video Editing & Post-Production</li>
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Cinematography & Photography</li>
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Graphic Design & Visual Branding</li>
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Basic Web Development</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <h4>Management & Clinical</h4>
-                        <ul class="skills-list">
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Strategic Leadership & Coordination</li>
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Clinical Healthcare & Midwifery</li>
-                            <li><i class="fas fa-check-circle" style="color: #10b981;"></i> P2P Trading & Negotiation</li>
-                        </ul>
+                <!-- SKILLS & COMPETENCIES -->
+                <div class="detail-block">
+                    <h3 class="detail-title"><i class="fas fa-tools"></i> Skills & Competencies</h3>
+                    <div class="grid-2">
+                        <div class="feature-card teal">
+                            <h4>Digital & Creative Skills</h4>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Video Editing & Post-Production</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Cinematography & Photography</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Graphic Design & Digital Branding</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Basic Web Development</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Management & Healthcare</h4>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Strategic Leadership & Planning</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Clinical Midwifery & Healthcare</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Peer-to-Peer Negotiation</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 4. APPLICATION LETTERS TAB (Standalone View triggered from Home Card) -->
-        <section id="applications" class="tab-content main-section">
-            <div class="section-header">
-                <h2>Application Letters ✉️</h2>
+                <!-- STRENGTHS & WEAKNESSES -->
+                <div class="detail-block">
+                    <h3 class="detail-title"><i class="fas fa-balance-scale"></i> Strengths & Weaknesses</h3>
+                    <div class="grid-2">
+                        <div class="feature-card gold">
+                            <h4 style="margin-bottom: 10px;">💪 Strengths</h4>
+                            <ul class="skills-list">
+                                <li>⚡ Fast Learner & Highly Adaptable</li>
+                                <li>⚡ Strong Leadership & Coordination</li>
+                                <li>⚡ Analytical Problem-Solving</li>
+                                <li>⚡ Dedicated & Result-Oriented</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card red">
+                            <h4 style="margin-bottom: 10px;">⚠️ Weaknesses</h4>
+                            <ul class="skills-list">
+                                <li>⚡ Perfectionism in Creative Output</li>
+                                <li>⚡ Tendency to Over-commit to Tasks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LANGUAGES & HOBBIES -->
+                <div class="detail-block">
+                    <div class="grid-2">
+                        <div class="feature-card teal">
+                            <h3 class="detail-title" style="border: none; padding: 0; margin-bottom: 12px;"><i class="fas fa-language"></i> Languages</h3>
+                            <ul class="skills-list">
+                                <li>🌐 <strong>Afaan Oromoo:</strong> Native</li>
+                                <li>🌐 <strong>Amharic:</strong> Intermediate</li>
+                                <li>🌐 <strong>English:</strong> Intermediate</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="detail-title" style="border: none; padding: 0; margin-bottom: 12px;"><i class="fas fa-heart"></i> Hobbies & Interests</h3>
+                            <ul class="skills-list">
+                                <li>📚 Continuous Reading & Learning</li>
+                                <li>📸 Photography & Videography</li>
+                                <li>🌾 Livestock Management & Agriculture</li>
+                                <li>🙋‍♂️ Community Volunteering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="detail-block">
-                <h4 style="margin-bottom: 8px; color: var(--text-dark);">1. Management & Operations Role</h4>
-                <div class="letter-box">
+            <!-- PART B: APPLICATION LETTERS -->
+            <div id="applications-section" style="margin-top: 40px; padding-top: 30px; border-top: 2px dashed rgba(203, 213, 225, 0.4);">
+                
+                <h3 class="detail-title"><i class="fas fa-envelope-open-text"></i> Application Letters</h3>
+
+                <div class="detail-block">
+                    <h4 style="margin-bottom: 10px; color: var(--text-dark);">1. Management & Operational Position</h4>
+                    <div class="letter-box">
 Addis Ababa, Ethiopia
 
 To: The Hiring Committee / HR Department
@@ -521,39 +548,44 @@ Subject: Application for Management or Operational Role
 
 Dear Hiring Manager,
 
-I am writing to express my strong interest in joining your organization. Holding a BA in Management from Africa Beza University (GPA: 3.84, Exit Exam: 71%) and a BSc in Midwifery from Wollega University (GPA: 3.65, Exit Exam: 67%), alongside expertise in digital media production, I offer a versatile and result-oriented skill set.
+I am writing to express my strong interest in joining your esteemed organization. Holding a BA in Management from Africa Beza University (GPA: 3.84, Exit Exam: 71%) and a BSc in Midwifery from Wollega University (GPA: 3.65, Exit Exam: 67%), alongside practical experience in digital media, I bring a versatile and disciplined skill set.
 
-My managerial background has cultivated strong capabilities in operational planning and leadership. I welcome the opportunity to contribute to your team.
+My management background has equipped me with solid capabilities in strategic planning, organizational leadership, and problem-solving. I welcome the opportunity to contribute my knowledge to your team.
 
 Sincerely,
 Lemma Asefa Kebede
-                </div>
+                    </div>
 
-                <h4 style="margin-top: 20px; margin-bottom: 8px; color: var(--text-dark);">2. Healthcare & Midwifery Role</h4>
-                <div class="letter-box">
+                    <h4 style="margin-top: 25px; margin-bottom: 10px; color: var(--text-dark);">2. Healthcare & Midwifery Position</h4>
+                    <div class="letter-box">
 Addis Ababa, Ethiopia
 
 To: The Medical Director / HR Department
 
-Subject: Application for Midwifery / Healthcare Role
+Subject: Application for Clinical Midwifery Role
 
 Dear Hiring Manager,
 
-I am submitting my application for a clinical role within your institution. Possessing a BSc degree in Midwifery from Wollega University (GPA: 3.65, Exit Exam: 67%), I am deeply committed to delivering quality health services.
+I am submitting my formal application for a clinical role within your institution. Possessing a BSc degree in Midwifery from Wollega University (GPA: 3.65, Exit Exam: 67%), I am deeply committed to delivering compassionate and high-quality healthcare services.
 
-My clinical training has provided comprehensive skills in patient care and clinical operations. Thank you for considering my application.
+My clinical education and practical training have prepared me to manage patient care effectively while upholding high professional standards. Thank you for considering my application.
 
 Sincerely,
 Lemma Asefa Kebede
+                    </div>
                 </div>
+
             </div>
+
         </section>
 
-        <!-- 5. CONTACT TAB (Completely Standalone) -->
-        <section id="contact" class="tab-content">
-            <div style="text-align: center; margin-top: 30px;" class="main-section">
-                <h2 style="margin-bottom: 10px;">Get in Touch 📩</h2>
-                <p style="color: #64748b;">You can reach me directly via the following channels:</p>
+
+        <!-- ================= 3. CONTACTS SECTION ================= -->
+        <section id="contacts" class="tab-content">
+            <div class="main-section" style="text-align: center;">
+                <h2 style="margin-bottom: 10px;">Direct Communication</h2>
+                <p style="color: #64748b;">Reach out directly via any preferred platform:</p>
+                
                 <div class="contact-card-inline">
                     <a href="tel:0909506573" class="icon-btn" title="Call Me">
                         <i class="fas fa-phone-alt"></i>
@@ -577,31 +609,701 @@ Lemma Asefa Kebede
 
     </div>
 
-    <!-- JAVASCRIPT FOR INDEPENDENT TAB SWITCHING -->
+    <!-- JAVASCRIPT FOR STRICT TAB SWITCHING -->
     <script>
         function switchTab(tabId) {
-            // Hide all tab sections
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
 
-            // Remove active status from navbar links
             const navLinks = document.querySelectorAll('nav ul li a');
             navLinks.forEach(link => link.classList.remove('active'));
 
-            // Show target section
             const targetTab = document.getElementById(tabId);
             if (targetTab) {
                 targetTab.classList.add('active');
             }
 
-            // Set active navigation button if matching top nav
             const activeNav = document.getElementById('nav-' + tabId);
             if (activeNav) {
                 activeNav.classList.add('active');
             }
 
-            // Scroll cleanly to the top
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navigateToSection(sectionId) {
+            switchTab('details');
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeBtn = document.getElementById('themeBtn');
+            const icon = themeBtn.querySelector('i');
+            const span = themeBtn.querySelector('span');
+
+            themeBtn.addEventListener('click', () => {
+                document.body.classList.toggle('dark-theme');
+                if (document.body.classList.contains('dark-theme')) {
+                    icon.className = 'fas fa-sun';
+                    span.textContent = 'Light';
+                } else {
+                    icon.className = 'fas fa-moon';
+                    span.textContent = 'Dark';
+                }
+            });
+
+            if (window.location.protocol === 'http:' && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+                window.location.href = window.location.href.replace('http:', 'https:');
+            }
+        });
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content; upgrade-insecure-requests">
+    
+    <title>Lemma Asefa Kebede | Professional Portfolio</title>
+    
+    <!-- Secure CDN Imports via HTTPS -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        :root {
+            --primary-grad: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            --accent-grad: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+            --bg-color: #0f172a;
+            --card-bg: #f8fafc;
+            --text-dark: #1e293b;
+            --text-light: #f8fafc;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-theme {
+            --bg-color: #020617;
+            --card-bg: #0f172a;
+            --text-dark: #f8fafc;
+            --border-color: rgba(255, 255, 255, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.4s ease, color 0.4s ease;
+        }
+
+        /* Navigation Header */
+        nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 40px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        nav ul li a.active, nav ul li a:hover {
+            background: var(--accent-grad);
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.4);
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text-light);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+        }
+
+        /* STRICT INDEPENDENT TAB SYSTEM */
+        .tab-content {
+            display: none !important;
+        }
+
+        .tab-content.active {
+            display: block !important;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 1. OVERVIEW SECTION */
+        #overview {
+            text-align: center;
+            background: var(--primary-grad);
+            border-radius: 24px;
+            padding: 50px 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            color: var(--text-light);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .user-avatar {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #38bdf8;
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.4);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .user-avatar:hover {
+            transform: scale(1.04);
+        }
+
+        .user-name {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+
+        .user-title {
+            color: #38bdf8;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .welcome-msg {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 35px auto;
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px 25px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* PORTAL CARDS TO DETAILS SECTION */
+        .home-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .click-card {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 25px 20px;
+            border-radius: 20px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .click-card i {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            color: #38bdf8;
+        }
+
+        .click-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .click-card p {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            margin-top: 5px;
+        }
+
+        .click-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.3);
+            border-color: #38bdf8;
+        }
+
+        /* 2. DETAILS SECTION */
+        .main-section {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: background-color 0.4s ease;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            width: 50%;
+            height: 4px;
+            background: var(--accent-grad);
+            position: absolute;
+            bottom: -8px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        .detail-block {
+            margin-bottom: 35px;
+        }
+
+        .detail-title {
+            font-size: 1.3rem;
+            color: #3b82f6;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid rgba(226, 232, 240, 0.3);
+            padding-bottom: 8px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 16px;
+            border-left: 5px solid #3b82f6;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            border-top: 1px solid rgba(0,0,0,0.05);
+            border-right: 1px solid rgba(0,0,0,0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .feature-card.gold { border-left-color: #f59e0b; }
+        .feature-card.teal { border-left-color: #06b6d4; }
+        .feature-card.red { border-left-color: #ef4444; }
+
+        .stat-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-right: 5px;
+            margin-top: 8px;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-dark);
+            font-size: 0.93rem;
+        }
+
+        .letter-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(203, 213, 225, 0.4);
+            padding: 22px;
+            border-radius: 16px;
+            white-space: pre-line;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            line-height: 1.6;
+        }
+
+        /* 3. CONTACTS SECTION */
+        .contact-card-inline {
+            background: var(--primary-grad);
+            padding: 25px 35px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 450px;
+            margin: 40px auto;
+        }
+
+        .icon-btn {
+            color: #f8fafc;
+            font-size: 1.6rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .icon-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+            transform: scale(1.15);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 20px 0;
+            font-size: 0.85rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 600px) {
+            nav { padding: 12px 15px; }
+            .contact-card-inline { gap: 15px; padding: 15px 20px; }
+            .icon-btn { font-size: 1.3rem; width: 42px; height: 42px; }
+            .main-section { padding: 25px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP NAVIGATION (Overview, Details, Contacts) -->
+    <nav>
+        <ul>
+            <li><a onclick="switchTab('overview')" id="nav-overview" class="active"><i class="fas fa-home"></i> Overview</a></li>
+            <li><a onclick="switchTab('details')" id="nav-details"><i class="fas fa-user-circle"></i> Details</a></li>
+            <li><a onclick="switchTab('contacts')" id="nav-contacts"><i class="fas fa-paper-plane"></i> Contacts</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeBtn">
+            <i class="fas fa-moon"></i> <span>Dark</span>
+        </button>
+    </nav>
+
+    <div class="container">
+
+        <!-- ================= 1. OVERVIEW SECTION ================= -->
+        <section id="overview" class="tab-content active">
+            <img src="SIIF8310.JPG" alt="Lemma Asefa Kebede" class="user-avatar">
+            
+            <h1 class="user-name">Lemma Asefa Kebede</h1>
+            <p class="user-title">Management Specialist & Healthcare Professional</p>
+
+            <!-- Modern Global Standard Welcome Message -->
+            <div class="welcome-msg">
+                Welcome to my professional portfolio. Here you will find an overview of my qualifications, formal applications, and contact details.
+            </div>
+
+            <!-- Direct Portals to CV & Applications inside Details -->
+            <div class="home-cards">
+                <div onclick="navigateToSection('cv-section')" class="click-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Curriculum Vitae</h3>
+                    <p>Qualifications, Education & Skills</p>
+                </div>
+                <div onclick="navigateToSection('applications-section')" class="click-card">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Application Letters</h3>
+                    <p>Management & Healthcare Roles</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= 2. DETAILS SECTION ================= -->
+        <section id="details" class="tab-content main-section">
+            
+            <div class="section-header">
+                <h2>Professional Details</h2>
+                <p style="color: #64748b; font-size: 0.95rem; margin-top: 6px;">📍 Jemo, Addis Ababa, Ethiopia</p>
+            </div>
+
+            <!-- PART A: CURRICULUM VITAE (CV) -->
+            <div id="cv-section">
+                
+                <!-- ACADEMIC BACKGROUND -->
+                <div class="detail-block">
+                    <h3 class="detail-title"><i class="fas fa-graduation-cap"></i> Educational Background</h3>
+                    <div class="grid-2">
+                        <div class="feature-card gold">
+                            <h4>BA in Management</h4>
+                            <p><strong>Africa Beza University</strong></p>
+                            <div>
+                                <span class="stat-badge">Cumulative GPA: 3.84</span>
+                                <span class="stat-badge">Exit Exam: 71%</span>
+                            </div>
+                        </div>
+                        <div class="feature-card">
+                            <h4>BSc in Midwifery</h4>
+                            <p><strong>Wollega University</strong></p>
+                            <div>
+                                <span class="stat-badge">Cumulative GPA: 3.65</span>
+                                <span class="stat-badge">Exit Exam: 67%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SKILLS & COMPETENCIES -->
+                <div class="detail-block">
+                    <h3 class="detail-title"><i class="fas fa-tools"></i> Skills & Competencies</h3>
+                    <div class="grid-2">
+                        <div class="feature-card teal">
+                            <h4>Digital & Creative Skills</h4>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Video Editing & Post-Production</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Cinematography & Photography</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Graphic Design & Digital Branding</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Basic Web Development</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h4>Management & Healthcare</h4>
+                            <ul class="skills-list">
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Strategic Leadership & Planning</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Clinical Midwifery & Healthcare</li>
+                                <li><i class="fas fa-check-circle" style="color: #10b981;"></i> Peer-to-Peer Negotiation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STRENGTHS & WEAKNESSES -->
+                <div class="detail-block">
+                    <h3 class="detail-title"><i class="fas fa-balance-scale"></i> Strengths & Weaknesses</h3>
+                    <div class="grid-2">
+                        <div class="feature-card gold">
+                            <h4 style="margin-bottom: 10px;">💪 Strengths</h4>
+                            <ul class="skills-list">
+                                <li>⚡ Fast Learner & Highly Adaptable</li>
+                                <li>⚡ Strong Leadership & Coordination</li>
+                                <li>⚡ Analytical Problem-Solving</li>
+                                <li>⚡ Dedicated & Result-Oriented</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card red">
+                            <h4 style="margin-bottom: 10px;">⚠️ Weaknesses</h4>
+                            <ul class="skills-list">
+                                <li>⚡ Perfectionism in Creative Output</li>
+                                <li>⚡ Tendency to Over-commit to Tasks</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LANGUAGES & HOBBIES -->
+                <div class="detail-block">
+                    <div class="grid-2">
+                        <div class="feature-card teal">
+                            <h3 class="detail-title" style="border: none; padding: 0; margin-bottom: 12px;"><i class="fas fa-language"></i> Languages</h3>
+                            <ul class="skills-list">
+                                <li>🌐 <strong>Afaan Oromoo:</strong> Native</li>
+                                <li>🌐 <strong>Amharic:</strong> Intermediate</li>
+                                <li>🌐 <strong>English:</strong> Intermediate</li>
+                            </ul>
+                        </div>
+                        <div class="feature-card">
+                            <h3 class="detail-title" style="border: none; padding: 0; margin-bottom: 12px;"><i class="fas fa-heart"></i> Hobbies & Interests</h3>
+                            <ul class="skills-list">
+                                <li>📚 Continuous Reading & Learning</li>
+                                <li>📸 Photography & Videography</li>
+                                <li>🌾 Livestock Management & Agriculture</li>
+                                <li>🙋‍♂️ Community Volunteering</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PART B: APPLICATION LETTERS -->
+            <div id="applications-section" style="margin-top: 40px; padding-top: 30px; border-top: 2px dashed rgba(203, 213, 225, 0.4);">
+                
+                <h3 class="detail-title"><i class="fas fa-envelope-open-text"></i> Application Letters</h3>
+
+                <div class="detail-block">
+                    <h4 style="margin-bottom: 10px; color: var(--text-dark);">1. Management & Operational Position</h4>
+                    <div class="letter-box">
+Addis Ababa, Ethiopia
+
+To: The Hiring Committee / HR Department
+
+Subject: Application for Management or Operational Role
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in joining your esteemed organization. Holding a BA in Management from Africa Beza University (GPA: 3.84, Exit Exam: 71%) and a BSc in Midwifery from Wollega University (GPA: 3.65, Exit Exam: 67%), alongside practical experience in digital media, I bring a versatile and disciplined skill set.
+
+My management background has equipped me with solid capabilities in strategic planning, organizational leadership, and problem-solving. I welcome the opportunity to contribute my knowledge to your team.
+
+Sincerely,
+Lemma Asefa Kebede
+                    </div>
+
+                    <h4 style="margin-top: 25px; margin-bottom: 10px; color: var(--text-dark);">2. Healthcare & Midwifery Position</h4>
+                    <div class="letter-box">
+Addis Ababa, Ethiopia
+
+To: The Medical Director / HR Department
+
+Subject: Application for Clinical Midwifery Role
+
+Dear Hiring Manager,
+
+I am submitting my formal application for a clinical role within your institution. Possessing a BSc degree in Midwifery from Wollega University (GPA: 3.65, Exit Exam: 67%), I am deeply committed to delivering compassionate and high-quality healthcare services.
+
+My clinical education and practical training have prepared me to manage patient care effectively while upholding high professional standards. Thank you for considering my application.
+
+Sincerely,
+Lemma Asefa Kebede
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 3. CONTACTS SECTION ================= -->
+        <section id="contacts" class="tab-content">
+            <div class="main-section" style="text-align: center;">
+                <h2 style="margin-bottom: 10px;">Direct Communication</h2>
+                <p style="color: #64748b;">Reach out directly via any preferred platform:</p>
+                
+                <div class="contact-card-inline">
+                    <a href="tel:0909506573" class="icon-btn" title="Call Me">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                    <a href="https://t.me/mylife0950" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="mailto:asefalemma09@gmail.com" class="icon-btn" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100072173466908" target="_blank" rel="noopener noreferrer" class="icon-btn" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Lemma Asefa Kebede. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- JAVASCRIPT FOR STRICT TAB SWITCHING -->
+    <script>
+        function switchTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => link.classList.remove('active'));
+
+            const targetTab = document.getElementById(tabId);
+            if (targetTab) {
+                targetTab.classList.add('active');
+            }
+
+            const activeNav = document.getElementById('nav-' + tabId);
+            if (activeNav) {
+                activeNav.classList.add('active');
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function navigateToSection(sectionId) {
+            switchTab('details');
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
