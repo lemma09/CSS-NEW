@@ -1,101 +1,314 @@
 <!DOCTYPE html>
-<html lang="om">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lammaa - Seenaa fi Mul'ata Jireenyaa</title>
+    <title>Lemma Asefa Kebede - Professional Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --accent-color: #319795;
+            --bg-color: #f7fafc;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+            --light-text: #718096;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Content Sections */
+        .section {
+            background-color: var(--card-bg);
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #f8fafc;
+            border-left: 4px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        /* List Items */
+        ul.skills-list {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        ul.skills-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Application Letter Box */
+        .letter-box {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            padding: 25px;
+            border-radius: 8px;
+            white-space: pre-line;
+            font-family: inherit;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: var(--light-text);
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Project</a></li>
-            <li><a href="#about">Waa'ee Koo</a></li>
-            <li><button type="button" class="mode-btn" onclick="bifaJijjiiri()">🌙 Mode</button></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#cv">Curriculum Vitae</a></li>
+            <li><a href="#cover-letter">Cover Letters</a></li>
+            <li><a href="#skills">Skills & Expertise</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        
-        <section id="home" class="hero">
-            <div class="image-wrapper">
-                <img src="SIIF8310.JPG" alt="Lammaa Photo" class="profile-img">
-            </div>
-            <h1 class="gradient-text">Baga Nagaan Dhufte</h1>
-            <p class="main-quote">"Inni ka'umsa hundaati; namni of amane hunda danda'a."</p>
-            <div class="intro-text">
-                <p>Ani Lammaa, ogeessa dandeettii dachaatiin addunyaa kalaqaa keessa jiru dha. Jireenyi koo seenaa qabsoo, milkaa'ina fi abjuu kumni guutame dha.</p>
-            </div>
-        </section>
 
-        <section id="projects" class="content-block">
-            <h2 class="section-title">Pirojektiwwan fi Ogummaa</h2>
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <h1>Lemma Asefa Kebede</h1>
+            <p>Healthcare Professional | Business Administrator | Creative Media Specialist</p>
+            <p style="font-size: 0.95rem; margin-top: 10px;">Jemo, Addis Ababa, Ethiopia</p>
+        </div>
+
+        <!-- ABOUT ME SECTION -->
+        <div id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <p>Welcome to my professional web portfolio! I am <strong>Lemma Asefa Kebede</strong>, a multi-skilled professional based in Addis Ababa, Ethiopia. Holding dual degrees—a <strong>Bachelor of Science in Midwifery</strong> and a <strong>Bachelor of Arts in Management</strong> from Wollega University—I combine clinical healthcare competence with administrative and organizational leadership.</p>
+            <br>
+            <p>Driven by continuous personal development, I am actively expanding my expertise into digital creative media, including <strong>Video Editing, Cinematography, Photography, and Graphic Design</strong>, alongside completing my professional <strong>Driving License certification</strong>.</p>
+        </div>
+
+        <!-- CURRICULUM VITAE SECTION -->
+        <div id="cv" class="section">
+            <h2 class="section-title">Curriculum Vitae (CV)</h2>
+
+            <h3>Academic Background</h3>
+            <div class="grid" style="margin-top: 15px; margin-bottom: 25px;">
+                <div class="card">
+                    <h3>Bachelor of Science (BSc) in Midwifery</h3>
+                    <p><strong>Institution:</strong> Wollega University, Ethiopia</p>
+                    <p>Focused on clinical maternal care, neonatal health, patient advocacy, and primary healthcare services.</p>
+                </div>
+                <div class="card">
+                    <h3>Bachelor of Arts (BA) in Management</h3>
+                    <p><strong>Institution:</strong> Wollega University, Ethiopia</p>
+                    <p>Specialized in operational leadership, organizational behavior, strategic planning, and resource management.</p>
+                </div>
+            </div>
+
+            <h3>Ongoing Studies & Practical Qualifications</h3>
+            <ul class="skills-list" style="margin-bottom: 25px;">
+                <li><strong>Creative Media & Production:</strong> Currently undergoing practical training in Cinematography, Photography, Video Editing, and Graphic Design.</li>
+                <li><strong>Driving Certification:</strong> Currently undergoing formal driving license training and road safety regulations.</li>
+                <li><strong>Student Leadership:</strong> Served in active leadership roles at Wollega University, handling student welfare and administrative communication.</li>
+                <li><strong>Professional Training:</strong> Completed certifications via Mindtickle & Dreamport (Travel Management & Ticketing) and participated in the 5 Million Ethiopian Coders initiative.</li>
+            </ul>
+        </div>
+
+        <!-- APPLICATION LETTERS SECTION -->
+        <div id="cover-letter" class="section">
+            <h2 class="section-title">Application Letters</h2>
             
-            <div class="project-detail">
-                <div class="card midwifery-card">
-                    <h3><i class="fas fa-stethoscope"></i> Midwifery (Ogummaa Yaalaa)</h3>
-                    <p>Jireenya haaraa addunyaatti fiduun eebba guddaa dha. Fayyaa haadhaa fi daa'imaa eeguun tajaajila jaalala fi garaa laafummaa gaafatu dha. Hawaasa kootiif tajaajila qulqulluu kennuun boonummaa kooti.</p>
+            <h3>1. Cover Letter (Management, Media & Customer Operations)</h3>
+            <div class="letter-box">
+Lemma Asefa Kebede
+Addis Ababa, Ethiopia
+
+To: The Hiring Committee / Human Resources Department
+
+Subject: Application for Management, Operational, or Media Production Role
+
+Dear Hiring Manager,
+
+I am writing to express my strong interest in joining your dynamic organization. Holding dual degrees in Management (BA) and Midwifery (BSc) from Wollega University, along with ongoing training in digital media production (Video Editing, Photography, Cinematography, and Graphic Design), I offer a versatile skill set tailored for multifaceted roles.
+
+My academic background in management has cultivated my leadership, project planning, and communication skills. Concurrently, my creative media expertise enables me to contribute effectively to digital storytelling, visual marketing, and brand communication. 
+
+I look forward to discussing how my technical skills, adaptability, and proactive mindset align with your organizational goals.
+
+Sincerely,
+Lemma Asefa Kebede
+            </div>
+
+            <br><br>
+
+            <h3>2. Cover Letter (Clinical Healthcare & Midwifery)</h3>
+            <div class="letter-box">
+Lemma Asefa Kebede
+Addis Ababa, Ethiopia
+
+To: The Medical Director / Healthcare HR Department
+
+Subject: Application for Midwifery / Healthcare Specialist Position
+
+Dear Hiring Manager,
+
+I am submitting my application for a clinical or public health position within your esteemed institution. Holding a Bachelor of Science degree in Midwifery from Wollega University, I am dedicated to delivering compassionate, high-quality maternal and neonatal care.
+
+My clinical training provided comprehensive knowledge of patient care, diagnostic procedures, health education, and emergency intervention. Paired with my formal management qualification, I am well-equipped to coordinate health workflows efficiently while maintaining high standards of care.
+
+Thank you for your time and consideration of my application.
+
+Sincerely,
+Lemma Asefa Kebede
+            </div>
+        </div>
+
+        <!-- SKILLS & EXPERTISE SECTION -->
+        <div id="skills" class="section">
+            <h2 class="section-title">Skills & Expertise</h2>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>Management & Operations</h3>
+                    <ul class="skills-list">
+                        <li>Strategic Leadership & Planning</li>
+                        <li>Operational Coordination</li>
+                        <li>Customer Service & Communication</li>
+                        <li>Team Management</li>
+                    </ul>
                 </div>
 
-                <div class="card management-card">
-                    <h3><i class="fas fa-tasks"></i> Management (Bulchiinsa)</h3>
-                    <p>Bulchiinsi gaariin utubaa milkaa'ina hundaati. Karoorsuu, qindeessuu fi qabeenya jiru sirriitti fayyadamanii galma gahuun ogummaa kooti. Leadership dandeettii koo isa hangafaa dha.</p>
+                <div class="card">
+                    <h3>Creative Media & Technical</h3>
+                    <ul class="skills-list">
+                        <li>Video Editing & Post-Production</li>
+                        <li>Cinematography & Photography</li>
+                        <li>Graphic Design & Visual Branding</li>
+                        <li>Basic Web Development (HTML/CSS)</li>
+                    </ul>
                 </div>
 
-                <div class="card coding-card">
-                    <h3><i class="fas fa-code"></i> Web Development (Koodii)</h3>
-                    <p>Addunyaa teeknoolojii keessatti of ijaaraa jira. HTML fi CSS fayyadamee waan sammuu koo keessa jiru gara addunyaatti fiduun dandeettii kalaqaa koo naaf mirkaneessa.</p>
+                <div class="card">
+                    <h3>Healthcare & Practical</h3>
+                    <ul class="skills-list">
+                        <li>Clinical Patient Care & Midwifery</li>
+                        <li>Maternal & Child Health Advocacy</li>
+                        <li>Practical Driving (License in Progress)</li>
+                        <li>Multilingual: Oromo, Amharic, English</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <section id="about" class="content-block">
-            <h2 class="section-title">Seenaa fi Jireenya Dhuunfaa</h2>
-            
-            <div class="full-story">
-                <h3><i class="fas fa-history"></i> Ka'umsa fi Guddina</h3>
-                <p>Jireenyi koo barumsa, obsa fi qabsoo walitti fufiinsaa dha. Abbaa koo baruumsaaf fedha adda qabu biratti guddachuun koo, jireenyi bu'uura cimaa barumsaa irratti akka ijaaramu na gargaareera. Akkakayyuu koo biratti guddachuun koo ammoo obsa fi jabeenya akka finkila jireenyaa ittiin injifatan na barsiiseera. Guddinni koo ka'umsa guddaa har'a irra gaheef bu'uura dha.</p>
-
-                <div class="personal-status-box">
-                    <h3><i class="fas fa-heart"></i> Haala Jireenya Jaalalaa</h3>
-                    <p>Amma jireenya koo keessatti xiyyeeffannoon koo inni guddaan of ijaaruu fi hojii haaraa uumuu dha. Kanaan dura turtii waggaa sadii jaalala keessa kan ture yoo ta'u, amma garuu <span class="highlight-red">Single</span> dha. Qabeenyi koo inni guddaan mul'ata kooti.</p>
-                    <p class="vision-wife">
-                        <i class="fas fa-star"></i> <strong>Mul'ata Boruu:</strong> Boru hiriyaa jaalalaa tan amala koof taatu, tan har'a hiriyaa, boru immoo <span class="highlight-green">Haadha Manaa</span> koo taatee, jireenya koo waliin miidhagsitu, abjuu koo kan naaf deeggartu argachuun hawwii kooti.
-                    </p>
-                </div>
-
-                <h3><i class="fas fa-quote-left"></i> Hayyoota Na Kakaasan</h3>
-                <div class="quotes-grid">
-                    <div class="quote-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR07k3V628_Hbe8h_N7SOfU18A_pXNf61m9tA&s" alt="Einstein">
-                        <p>"Namni dogoggora hin hojjenne, waan haaraa yaalee hin beeku."</p>
-                        <span>— Albert Einstein</span>
-                    </div>
-                    <div class="quote-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_R7K98BfS0X68iX91P0_8U1_E0pB_E1R1YQ&s" alt="Mandela">
-                        <p>"Barumsi meeshaa humna qabu kan ati addunyaa ittiin jijjiiruuf fayyadamtu dha."</p>
-                        <span>— Nelson Mandela</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="content-block">
-            <h2>Na Quunnamaa</h2>
-            <div class="social-links">
-                <a href="https://t.me/mylife0950" target="_blank" class="social-icon"><i class="fab fa-telegram"></i> Telegram</a>
-                <a href="https://www.facebook.com/share/1HcEk5sALE/" target="_blank" class="social-icon"><i class="fab fa-facebook"></i> Facebook</a>
-            </div>
-        </section>
+        <!-- CONTACT SECTION -->
+        <div id="contact" class="section">
+            <h2 class="section-title">Contact Information</h2>
+            <p><strong>Full Name:</strong> Lemma Asefa Kebede</p>
+            <p><strong>Location:</strong> Jemo, Addis Ababa, Ethiopia</p>
+            <p><strong>Languages:</strong> Afaan Oromoo, Amharic, English</p>
+        </div>
 
         <footer>
-            <p>Copyright &copy; 2026 | Developed with ❤️ by <strong>LAMMAA</strong></p>
+            <p>&copy; 2026 Lemma Asefa Kebede. All Rights Reserved.</p>
         </footer>
+
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
